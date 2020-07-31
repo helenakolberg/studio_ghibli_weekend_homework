@@ -1,8 +1,12 @@
 <template>
   <div>
-    <film-select :dropDownFilms="films" />
+    <div>
+      <button @click="handleClick">View All Films</button>
+    </div>
+    <div>
+      <film-select :dropDownFilms="films" />
+    </div>
     <film-detail v-if="!isClicked && selectedFilm" :film="selectedFilm" />
-    <button @click="handleClick">View All Films</button>
     <film-list v-if="isClicked" :films="films" />
   </div>
 </template>
@@ -34,7 +38,12 @@ export default {
     eventBus.$on('selected-film', (film) => {
       this.selectedFilm = film;
       if (this.isClicked === true) this.isClicked = false;
-    })  
+    })
+
+    eventBus.$on('film-from-list', (film) => {
+      this.selectedFilm = film;
+      if (this.isClicked === true) this.isClicked = false;
+    })
 
   },
   components: {
