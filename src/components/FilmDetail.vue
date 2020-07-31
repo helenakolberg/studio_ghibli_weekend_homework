@@ -1,7 +1,7 @@
 <template>
   <div>
-      <h3>{{ film.title }}</h3>
-      <h2>Director</h2>
+      <h2>{{ film.title }}</h2>
+      <h3>Director</h3>
       <div>{{ film.director }}</div>
   </div>
 </template>
