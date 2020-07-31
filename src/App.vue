@@ -1,8 +1,12 @@
 <template>
-  
+  <div>
+    <film-select />
+  </div>
 </template>
 
 <script>
+import FilmSelect from './components/FilmSelect';
+
 export default {
   data() {
     return {
@@ -14,6 +18,9 @@ export default {
       .then(response => response.json())
       .then(data => this.films = data)
 
+  },
+  components: {
+    "film-select": FilmSelect
   }
 }
 </script>
