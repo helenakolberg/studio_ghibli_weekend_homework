@@ -1,11 +1,12 @@
 <template>
   <div>
-    <film-select :films="films" />
+    <film-select :dropDownFilms="films" />
   </div>
 </template>
 
 <script>
 import FilmSelect from './components/FilmSelect';
+import FilmDetail from './components/FilmDetail'
 
 export default {
   data() {
@@ -20,7 +21,8 @@ export default {
 
   },
   components: {
-    "film-select": FilmSelect
+    "film-select": FilmSelect,
+    "film-detail": FilmDetail
   }
 }
 </script>
