@@ -1,12 +1,15 @@
 <template>
   <div>
-      Hello
+      <select>
+          <option v-for="(film, index) in films" :key="index" v-bind:value="film">{{ film.title }}</option>
+      </select>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'film-select'
+    name: 'film-select',
+    props: ['films']
 
 }
 </script>

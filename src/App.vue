@@ -1,6 +1,6 @@
 <template>
   <div>
-    <film-select />
+    <film-select :films="films" />
   </div>
 </template>
 
