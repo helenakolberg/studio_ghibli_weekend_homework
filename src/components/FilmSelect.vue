@@ -1,6 +1,7 @@
 <template>
   <div>
       <select @change="handleChange" v-model="selectChangeFilm">
+          <option value=null disabled selected>Choose a Film</option>
           <option v-for="(film, index) in dropDownFilms" :key="index" v-bind:value="film">{{ film.title }}</option>
       </select>
   </div>
