@@ -1,8 +1,6 @@
 <template>
-  <div>
-      <ul>
-          <film-detail v-for="(film, index) in films" :film="film" :key="index"/>
-      </ul>
+  <div id="details">
+    <film-detail class="detail-item" v-for="(film, index) in films" :film="film" :key="index"/></div>
   </div>
 </template>
 
@@ -20,4 +18,18 @@ export default {
 
 <style>
 
+#details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.detail-item {
+    width: 300px;
+    height: auto;
+    margin: 20px;
+    border: solid white 3px;
+    border-radius: 14px;
+    padding: 10px;
+}
 </style>

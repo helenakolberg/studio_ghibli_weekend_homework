@@ -1,6 +1,6 @@
 <template>
     <div>
-      <GChart
+      <GChart id="pie-chart"
        type="PieChart"
        :data="chartData"
        :options="chartOptions"
@@ -28,9 +28,11 @@ export default {
 
             chartOptions: {
                 chart: {
-                    title: 'Directors',
+                    "title": "Studio Ghibli films are directed by:",
                     is3D: true,
-                }
+                },
+                backgroundColor: { fill:'transparent' },
+                legendTextStyle: { color: '#FFFFFF' }
             }
         }
     },
