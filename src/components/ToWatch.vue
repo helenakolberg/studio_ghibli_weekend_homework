@@ -1,10 +1,14 @@
 <template>
   <div>
       <ul>
-          <li v-for="(film, index) in toWatch" :key="index">
+        <li id="empty-to-watch" v-if="toWatch.length === 0">
+            Oh no! There is nothing on your to-watch list!
+            <button @click="handleLuckyDip">Lucky Dip</button>
+        </li>
+        <li v-for="(film, index) in toWatch" :key="index">
             {{ film.title }}, {{ film.release_date }}
             <button @click="handleClick(film)">Watched!</button>
-          </li>
+        </li>
       </ul>
   </div>
 </template>
@@ -29,11 +33,20 @@ export default {
         handleClick(film) {
             const index = this.toWatch.indexOf(film);
             this.toWatch.splice(index, 1);
+        },
+
+        handleLuckyDip() {
+            const film = this.favourites[Math.floor(Math.random() * this.favourites.length)];
+            this.toWatch.push(film);
         }
     }
 }
 </script>
 
 <style>
+
+#empty-to-watch {
+    font-size: 14px;
+}
 
 </style>

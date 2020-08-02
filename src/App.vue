@@ -15,7 +15,7 @@
     <film-detail v-if="!isClicked && selectedFilm" :film="selectedFilm" />
     <film-list v-if="isClicked" :films="films" />
     <h2 id="watch-title">To Watch</h2>
-    <to-watch />
+    <to-watch :favourites="films" />
   </div>
 </template>
 
