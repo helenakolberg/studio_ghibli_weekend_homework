@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Studio Ghibli Films</h1>
     <div>
       <button @click="handleClick">View All Films</button>
     </div>
@@ -8,6 +9,7 @@
     </div>
     <film-detail v-if="!isClicked && selectedFilm" :film="selectedFilm" />
     <film-list v-if="isClicked" :films="films" />
+    <pie-chart :pieChartFilms="films"/>
   </div>
 </template>
 
@@ -16,13 +18,15 @@ import {eventBus} from '@/main.js'
 import FilmSelect from './components/FilmSelect';
 import FilmDetail from './components/FilmDetail'
 import FilmList from './components/FilmList';
+import PieChart from './components/PieChart'
 
 export default {
   data() {
     return {
       films: [],
       selectedFilm: null,
-      isClicked: false
+      isClicked: false,
+      toWatch: []
     }
   },
   methods: {
@@ -49,7 +53,8 @@ export default {
   components: {
     "film-select": FilmSelect,
     "film-detail": FilmDetail,
-    "film-list": FilmList
+    "film-list": FilmList,
+    "pie-chart": PieChart
   }
 }
 </script>
