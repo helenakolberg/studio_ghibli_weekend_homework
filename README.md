@@ -1,26 +1,17 @@
-# studio_ghibli  
+# Studio Ghibli App
 
 A Vue application displaying information about Studio Ghibli films, using the Studio Ghibli API and a Google Chart.  
 
-## Project setup
-```
-npm install
-```
+## How To Run
 
-### Compiles and hot-reloads for development
+##### Commands to run in the terminal:
+
+```
+npm i
+```
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).  
-  
-  
   
 ## Brief  
 
