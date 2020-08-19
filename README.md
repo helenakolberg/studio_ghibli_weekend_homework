@@ -1,4 +1,6 @@
-# studio_ghibli
+# studio_ghibli  
+
+A Vue application displaying information about Studio Ghibli films, using the Studio Ghibli API and a Google Chart.  
 
 ## Project setup
 ```
